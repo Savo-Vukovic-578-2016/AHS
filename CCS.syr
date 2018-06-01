@@ -1,0 +1,1095 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: CCS.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "CCS.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "CCS"
+Output Format                      : NGC
+Target Device                      : xc3s1200e-4-fg320
+
+---- Source Options
+Top Module Name                    : CCS
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "rockets.v" in library work
+Compiling verilog file "FD.v" in library work
+Module <rockets> compiled
+Compiling verilog file "display_7s.v" in library work
+Module <FD> compiled
+Compiling verilog file "displays.v" in library work
+Module <display_7s> compiled
+Compiling verilog file "AFCS.v" in library work
+Module <displays> compiled
+Compiling verilog file "CCS.v" in library work
+Module <AFCS> compiled
+Module <CCS> compiled
+No errors in compilation
+Analysis of file <"CCS.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <CCS> in library <work>.
+
+Analyzing hierarchy for module <rockets> in library <work>.
+
+Analyzing hierarchy for module <AFCS> in library <work>.
+
+Analyzing hierarchy for module <display_7s> in library <work>.
+
+Analyzing hierarchy for module <displays> in library <work>.
+
+Analyzing hierarchy for module <FD> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <CCS>.
+Module <CCS> is correct for synthesis.
+ 
+Analyzing module <rockets> in library <work>.
+Module <rockets> is correct for synthesis.
+ 
+Analyzing module <AFCS> in library <work>.
+Module <AFCS> is correct for synthesis.
+ 
+Analyzing module <display_7s> in library <work>.
+Module <display_7s> is correct for synthesis.
+ 
+Analyzing module <displays> in library <work>.
+Module <displays> is correct for synthesis.
+ 
+Analyzing module <FD> in library <work>.
+Module <FD> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <rockets>.
+    Related source file is "rockets.v".
+    Found 5-bit register for signal <rocketsH>.
+    Found 5-bit register for signal <rocketsL>.
+    Found 5-bit comparator greatequal for signal <rocketsH$cmp_ge0000> created at line 43.
+    Found 5-bit comparator greatequal for signal <rocketsH$cmp_ge0001> created at line 48.
+    Found 5-bit subtractor for signal <rocketsL$share0000>.
+    Found 5-bit register for signal <temp>.
+    Summary:
+	inferred  15 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <rockets> synthesized.
+
+
+Synthesizing Unit <AFCS>.
+    Related source file is "AFCS.v".
+    Found 5-bit register for signal <rockets>.
+    Found 5-bit subtractor for signal <rockets$addsub0000> created at line 43.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <AFCS> synthesized.
+
+
+Synthesizing Unit <display_7s>.
+    Related source file is "display_7s.v".
+    Found 1-bit register for signal <dp<0>>.
+    Found 1-bit register for signal <a<0>>.
+    Found 1-bit register for signal <b<0>>.
+    Found 1-bit register for signal <c<0>>.
+    Found 1-bit register for signal <d<0>>.
+    Found 1-bit register for signal <e<0>>.
+    Found 1-bit register for signal <f<0>>.
+    Found 1-bit register for signal <g<0>>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <display_7s> synthesized.
+
+
+Synthesizing Unit <displays>.
+    Related source file is "displays.v".
+WARNING:Xst:1305 - Output <AN2> is never assigned. Tied to value 1.
+WARNING:Xst:1305 - Output <AN3> is never assigned. Tied to value 1.
+    Found 1-bit register for signal <dp<0>>.
+    Found 1-bit register for signal <a<0>>.
+    Found 1-bit register for signal <b<0>>.
+    Found 1-bit register for signal <c<0>>.
+    Found 1-bit register for signal <d<0>>.
+    Found 1-bit register for signal <e<0>>.
+    Found 1-bit register for signal <f<0>>.
+    Found 1-bit register for signal <g<0>>.
+    Found 1-bit register for signal <AN0<0>>.
+    Found 1-bit register for signal <AN1<0>>.
+    Found 1-bit register for signal <counter<0>>.
+    Summary:
+	inferred  11 D-type flip-flop(s).
+Unit <displays> synthesized.
+
+
+Synthesizing Unit <FD>.
+    Related source file is "FD.v".
+    Found 1-bit register for signal <clock_station<0>>.
+    Found 1-bit register for signal <clock_7s<0>>.
+    Found 1-bit register for signal <c1<0>>.
+    Found 1-bit register for signal <c10<0>>.
+    Found 1-bit register for signal <c11<0>>.
+    Found 1-bit register for signal <c12<0>>.
+    Found 1-bit register for signal <c13<0>>.
+    Found 1-bit register for signal <c14<0>>.
+    Found 1-bit register for signal <c15<0>>.
+    Found 1-bit register for signal <c17<0>>.
+    Found 1-bit register for signal <c18<0>>.
+    Found 1-bit register for signal <c19<0>>.
+    Found 1-bit register for signal <c2<0>>.
+    Found 1-bit register for signal <c20<0>>.
+    Found 1-bit register for signal <c21<0>>.
+    Found 1-bit register for signal <c22<0>>.
+    Found 1-bit register for signal <c23<0>>.
+    Found 1-bit register for signal <c25<0>>.
+    Found 1-bit register for signal <c3<0>>.
+    Found 1-bit register for signal <c4<0>>.
+    Found 1-bit register for signal <c5<0>>.
+    Found 1-bit register for signal <c6<0>>.
+    Found 1-bit register for signal <c7<0>>.
+    Found 1-bit register for signal <c8<0>>.
+    Found 1-bit register for signal <c9<0>>.
+    Summary:
+	inferred  25 D-type flip-flop(s).
+Unit <FD> synthesized.
+
+
+Synthesizing Unit <CCS>.
+    Related source file is "CCS.v".
+Unit <CCS> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 5-bit subtractor                                      : 4
+# Registers                                            : 58
+ 1-bit register                                        : 52
+ 5-bit register                                        : 6
+# Comparators                                          : 2
+ 5-bit comparator greatequal                           : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:79 - Model 'FD' has different characteristics in destination library
+WARNING:Xst:80 - Model name has been changed to 'FD1'
+INFO:Xst:2261 - The FF/Latch <rocketsH_2> in Unit <rockets1> is equivalent to the following 2 FFs/Latches, which will be removed : <rocketsH_3> <rocketsH_4> 
+WARNING:Xst:1426 - The value init of the FF/Latch dp_0 hinder the constant cleaning in the block display_1.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1710 - FF/Latch <rocketsH_2> (without init value) has a constant value of 0 in block <rockets1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <b_0> has a constant value of 0 in block <display_1>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 5-bit subtractor                                      : 4
+# Registers                                            : 82
+ Flip-Flops                                            : 82
+# Comparators                                          : 2
+ 5-bit comparator greatequal                           : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <rocketsH_2> (without init value) has a constant value of 0 in block <rockets>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rocketsH_3> (without init value) has a constant value of 0 in block <rockets>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rocketsH_4> (without init value) has a constant value of 0 in block <rockets>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <CCS> ...
+
+Optimizing unit <rockets> ...
+
+Optimizing unit <AFCS> ...
+
+Optimizing unit <display_7s> ...
+
+Optimizing unit <displays> ...
+
+Optimizing unit <FD1> ...
+WARNING:Xst:1710 - FF/Latch <rocketsL_4> (without init value) has a constant value of 0 in block <rockets>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1426 - The value init of the FF/Latch display_1/dp_0 hinder the constant cleaning in the block CCS.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <display_1/b_0> has a constant value of 0 in block <CCS>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <display/counter_0> in Unit <CCS> is equivalent to the following FF/Latch, which will be removed : <display/AN0_0> 
+INFO:Xst:2261 - The FF/Latch <display_1/d_0> in Unit <CCS> is equivalent to the following FF/Latch, which will be removed : <display_1/a_0> 
+Found area constraint ratio of 100 (+ 5) on block CCS, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 75
+ Flip-Flops                                            : 75
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : CCS.ngr
+Top Level Output File Name         : CCS
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 19
+
+Cell Usage :
+# BELS                             : 86
+#      INV                         : 1
+#      LUT2                        : 6
+#      LUT3                        : 18
+#      LUT3_D                      : 3
+#      LUT3_L                      : 1
+#      LUT4                        : 43
+#      LUT4_L                      : 3
+#      MUXF5                       : 10
+#      VCC                         : 1
+# FlipFlops/Latches                : 75
+#      FD                          : 21
+#      FDE                         : 20
+#      FDR                         : 30
+#      FDS                         : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 18
+#      IBUF                        : 6
+#      OBUF                        : 12
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1200efg320-4 
+
+ Number of Slices:                       57  out of   8672     0%  
+ Number of Slice Flip Flops:             75  out of  17344     0%  
+ Number of 4 input LUTs:                 75  out of  17344     0%  
+ Number of IOs:                          19
+ Number of bonded IOBs:                  19  out of    250     7%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+--------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)          | Load  |
+-----------------------------------+--------------------------------+-------+
+clock                              | BUFGP                          | 26    |
+F_divider/clock_station_0          | NONE(station_3/rockets_4)      | 15    |
+F_divider/clock_7s_0               | NONE(display/AN1_0)            | 11    |
+F_divider/c25_0                    | NONE(F_divider/clock_station_0)| 1     |
+F_divider/c23_0                    | NONE(F_divider/c25_0)          | 1     |
+F_divider/c22_0                    | NONE(F_divider/c23_0)          | 1     |
+F_divider/c21_0                    | NONE(F_divider/c22_0)          | 1     |
+F_divider/c20_0                    | NONE(F_divider/c21_0)          | 1     |
+F_divider/c19_0                    | NONE(F_divider/c20_0)          | 1     |
+F_divider/c18_0                    | NONE(F_divider/c19_0)          | 1     |
+F_divider/c17_0                    | NONE(F_divider/c18_0)          | 1     |
+F_divider/c15_0                    | NONE(F_divider/clock_7s_0)     | 1     |
+F_divider/c14_0                    | NONE(F_divider/c15_0)          | 1     |
+F_divider/c13_0                    | NONE(F_divider/c14_0)          | 1     |
+F_divider/c12_0                    | NONE(F_divider/c13_0)          | 1     |
+F_divider/c11_0                    | NONE(F_divider/c12_0)          | 1     |
+F_divider/c10_0                    | NONE(F_divider/c11_0)          | 1     |
+F_divider/c9_0                     | NONE(F_divider/c10_0)          | 1     |
+F_divider/c8_0                     | NONE(F_divider/c9_0)           | 1     |
+F_divider/c7_0                     | NONE(F_divider/c8_0)           | 1     |
+F_divider/c6_0                     | NONE(F_divider/c7_0)           | 1     |
+F_divider/c5_0                     | NONE(F_divider/c6_0)           | 1     |
+F_divider/c4_0                     | NONE(F_divider/c5_0)           | 1     |
+F_divider/c3_0                     | NONE(F_divider/c4_0)           | 1     |
+F_divider/c2_0                     | NONE(F_divider/c3_0)           | 1     |
+F_divider/c1_0                     | NONE(F_divider/c2_0)           | 1     |
+-----------------------------------+--------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 4.403ns (Maximum Frequency: 227.118MHz)
+   Minimum input arrival time before clock: 6.814ns
+   Maximum output required time after clock: 4.796ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 3.933ns (frequency: 254.259MHz)
+  Total number of paths / destination ports: 94 / 26
+-------------------------------------------------------------------------
+Delay:               3.933ns (Levels of Logic = 2)
+  Source:            rockets1/rocketsL_2 (FF)
+  Destination:       display_0/e_0 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: rockets1/rocketsL_2 to display_0/e_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              14   0.591   1.175  rockets1/rocketsL_2 (rockets1/rocketsL_2)
+     LUT2:I0->O            2   0.704   0.451  display_0/e_0_mux000024 (display_0/N3)
+     LUT4:I3->O            1   0.704   0.000  display_0/e_0_mux0000231 (display_0/e_0_mux000023)
+     FDS:D                     0.308          display_0/e_0
+    ----------------------------------------
+    Total                      3.933ns (2.307ns logic, 1.626ns route)
+                                       (58.7% logic, 41.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'F_divider/clock_station_0'
+  Clock period: 4.403ns (frequency: 227.118MHz)
+  Total number of paths / destination ports: 126 / 30
+-------------------------------------------------------------------------
+Delay:               4.403ns (Levels of Logic = 2)
+  Source:            station_3/rockets_0 (FF)
+  Destination:       station_3/rockets_4 (FF)
+  Source Clock:      F_divider/clock_station_0 rising
+  Destination Clock: F_divider/clock_station_0 rising
+
+  Data Path: station_3/rockets_0 to station_3/rockets_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              8   0.591   0.761  station_3/rockets_0 (station_3/rockets_0)
+     LUT4:I3->O            1   0.704   0.455  station_3/rockets_not00019_SW0 (N31)
+     LUT4:I2->O            5   0.704   0.633  station_3/rockets_not000125 (station_3/rockets_not0001)
+     FDE:CE                    0.555          station_3/rockets_0
+    ----------------------------------------
+    Total                      4.403ns (2.554ns logic, 1.849ns route)
+                                       (58.0% logic, 42.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'F_divider/clock_7s_0'
+  Clock period: 3.559ns (frequency: 280.978MHz)
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Delay:               3.559ns (Levels of Logic = 1)
+  Source:            display/counter_0 (FF)
+  Destination:       display/AN1_0 (FF)
+  Source Clock:      F_divider/clock_7s_0 rising
+  Destination Clock: F_divider/clock_7s_0 rising
+
+  Data Path: display/counter_0 to display/AN1_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             11   0.591   0.933  display/counter_0 (display/counter_0)
+     INV:I->O              1   0.704   0.420  display/counter_inv1_INV_0 (display/counter_inv)
+     FDR:R                     0.911          display/AN1_0
+    ----------------------------------------
+    Total                      3.559ns (2.206ns logic, 1.353ns route)
+                                       (62.0% logic, 38.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'F_divider/c25_0'
+  Clock period: 2.536ns (frequency: 394.322MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.536ns (Levels of Logic = 0)
+  Source:            F_divider/clock_station_0 (FF)
+  Destination:       F_divider/clock_station_0 (FF)
+  Source Clock:      F_divider/c25_0 rising
+  Destination Clock: F_divider/c25_0 rising
+
+  Data Path: F_divider/clock_station_0 to F_divider/clock_station_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             16   0.591   1.034  F_divider/clock_station_0 (F_divider/clock_station_0)
+     FDR:R                     0.911          F_divider/clock_station_0
+    ----------------------------------------
+    Total                      2.536ns (1.502ns logic, 1.034ns route)
+                                       (59.2% logic, 40.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'F_divider/c23_0'
+  Clock period: 1.949ns (frequency: 513.084MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.949ns (Levels of Logic = 0)
+  Source:            F_divider/c25_0 (FF)
+  Destination:       F_divider/c25_0 (FF)
+  Source Clock:      F_divider/c23_0 rising
+  Destination Clock: F_divider/c23_0 rising
+
+  Data Path: F_divider/c25_0 to F_divider/c25_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.447  F_divider/c25_0 (F_divider/c25_0)
+     FDR:R                     0.911          F_divider/c25_0
+    ----------------------------------------
+    Total                      1.949ns (1.502ns logic, 0.447ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'F_divider/c22_0'
+  Clock period: 1.949ns (frequency: 513.084MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.949ns (Levels of Logic = 0)
+  Source:            F_divider/c23_0 (FF)
+  Destination:       F_divider/c23_0 (FF)
+  Source Clock:      F_divider/c22_0 rising
+  Destination Clock: F_divider/c22_0 rising
+
+  Data Path: F_divider/c23_0 to F_divider/c23_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.447  F_divider/c23_0 (F_divider/c23_0)
+     FDR:R                     0.911          F_divider/c23_0
+    ----------------------------------------
+    Total                      1.949ns (1.502ns logic, 0.447ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'F_divider/c21_0'
+  Clock period: 1.949ns (frequency: 513.084MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.949ns (Levels of Logic = 0)
+  Source:            F_divider/c22_0 (FF)
+  Destination:       F_divider/c22_0 (FF)
+  Source Clock:      F_divider/c21_0 rising
+  Destination Clock: F_divider/c21_0 rising
+
+  Data Path: F_divider/c22_0 to F_divider/c22_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.447  F_divider/c22_0 (F_divider/c22_0)
+     FDR:R                     0.911          F_divider/c22_0
+    ----------------------------------------
+    Total                      1.949ns (1.502ns logic, 0.447ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'F_divider/c20_0'
+  Clock period: 1.949ns (frequency: 513.084MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.949ns (Levels of Logic = 0)
+  Source:            F_divider/c21_0 (FF)
+  Destination:       F_divider/c21_0 (FF)
+  Source Clock:      F_divider/c20_0 rising
+  Destination Clock: F_divider/c20_0 rising
+
+  Data Path: F_divider/c21_0 to F_divider/c21_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.447  F_divider/c21_0 (F_divider/c21_0)
+     FDR:R                     0.911          F_divider/c21_0
+    ----------------------------------------
+    Total                      1.949ns (1.502ns logic, 0.447ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'F_divider/c19_0'
+  Clock period: 1.949ns (frequency: 513.084MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.949ns (Levels of Logic = 0)
+  Source:            F_divider/c20_0 (FF)
+  Destination:       F_divider/c20_0 (FF)
+  Source Clock:      F_divider/c19_0 rising
+  Destination Clock: F_divider/c19_0 rising
+
+  Data Path: F_divider/c20_0 to F_divider/c20_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.447  F_divider/c20_0 (F_divider/c20_0)
+     FDR:R                     0.911          F_divider/c20_0
+    ----------------------------------------
+    Total                      1.949ns (1.502ns logic, 0.447ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'F_divider/c18_0'
+  Clock period: 1.949ns (frequency: 513.084MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.949ns (Levels of Logic = 0)
+  Source:            F_divider/c19_0 (FF)
+  Destination:       F_divider/c19_0 (FF)
+  Source Clock:      F_divider/c18_0 rising
+  Destination Clock: F_divider/c18_0 rising
+
+  Data Path: F_divider/c19_0 to F_divider/c19_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.447  F_divider/c19_0 (F_divider/c19_0)
+     FDR:R                     0.911          F_divider/c19_0
+    ----------------------------------------
+    Total                      1.949ns (1.502ns logic, 0.447ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'F_divider/c17_0'
+  Clock period: 1.949ns (frequency: 513.084MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.949ns (Levels of Logic = 0)
+  Source:            F_divider/c18_0 (FF)
+  Destination:       F_divider/c18_0 (FF)
+  Source Clock:      F_divider/c17_0 rising
+  Destination Clock: F_divider/c17_0 rising
+
+  Data Path: F_divider/c18_0 to F_divider/c18_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.447  F_divider/c18_0 (F_divider/c18_0)
+     FDR:R                     0.911          F_divider/c18_0
+    ----------------------------------------
+    Total                      1.949ns (1.502ns logic, 0.447ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'F_divider/c15_0'
+  Clock period: 2.463ns (frequency: 406.009MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.463ns (Levels of Logic = 0)
+  Source:            F_divider/clock_7s_0 (FF)
+  Destination:       F_divider/clock_7s_0 (FF)
+  Source Clock:      F_divider/c15_0 rising
+  Destination Clock: F_divider/c15_0 rising
+
+  Data Path: F_divider/clock_7s_0 to F_divider/clock_7s_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             12   0.591   0.961  F_divider/clock_7s_0 (F_divider/clock_7s_0)
+     FDR:R                     0.911          F_divider/clock_7s_0
+    ----------------------------------------
+    Total                      2.463ns (1.502ns logic, 0.961ns route)
+                                       (61.0% logic, 39.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'F_divider/c14_0'
+  Clock period: 1.949ns (frequency: 513.084MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.949ns (Levels of Logic = 0)
+  Source:            F_divider/c15_0 (FF)
+  Destination:       F_divider/c15_0 (FF)
+  Source Clock:      F_divider/c14_0 rising
+  Destination Clock: F_divider/c14_0 rising
+
+  Data Path: F_divider/c15_0 to F_divider/c15_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.447  F_divider/c15_0 (F_divider/c15_0)
+     FDR:R                     0.911          F_divider/c15_0
+    ----------------------------------------
+    Total                      1.949ns (1.502ns logic, 0.447ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'F_divider/c13_0'
+  Clock period: 1.949ns (frequency: 513.084MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.949ns (Levels of Logic = 0)
+  Source:            F_divider/c14_0 (FF)
+  Destination:       F_divider/c14_0 (FF)
+  Source Clock:      F_divider/c13_0 rising
+  Destination Clock: F_divider/c13_0 rising
+
+  Data Path: F_divider/c14_0 to F_divider/c14_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.447  F_divider/c14_0 (F_divider/c14_0)
+     FDR:R                     0.911          F_divider/c14_0
+    ----------------------------------------
+    Total                      1.949ns (1.502ns logic, 0.447ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'F_divider/c12_0'
+  Clock period: 1.949ns (frequency: 513.084MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.949ns (Levels of Logic = 0)
+  Source:            F_divider/c13_0 (FF)
+  Destination:       F_divider/c13_0 (FF)
+  Source Clock:      F_divider/c12_0 rising
+  Destination Clock: F_divider/c12_0 rising
+
+  Data Path: F_divider/c13_0 to F_divider/c13_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.447  F_divider/c13_0 (F_divider/c13_0)
+     FDR:R                     0.911          F_divider/c13_0
+    ----------------------------------------
+    Total                      1.949ns (1.502ns logic, 0.447ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'F_divider/c11_0'
+  Clock period: 1.949ns (frequency: 513.084MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.949ns (Levels of Logic = 0)
+  Source:            F_divider/c12_0 (FF)
+  Destination:       F_divider/c12_0 (FF)
+  Source Clock:      F_divider/c11_0 rising
+  Destination Clock: F_divider/c11_0 rising
+
+  Data Path: F_divider/c12_0 to F_divider/c12_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.447  F_divider/c12_0 (F_divider/c12_0)
+     FDR:R                     0.911          F_divider/c12_0
+    ----------------------------------------
+    Total                      1.949ns (1.502ns logic, 0.447ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'F_divider/c10_0'
+  Clock period: 1.949ns (frequency: 513.084MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.949ns (Levels of Logic = 0)
+  Source:            F_divider/c11_0 (FF)
+  Destination:       F_divider/c11_0 (FF)
+  Source Clock:      F_divider/c10_0 rising
+  Destination Clock: F_divider/c10_0 rising
+
+  Data Path: F_divider/c11_0 to F_divider/c11_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.447  F_divider/c11_0 (F_divider/c11_0)
+     FDR:R                     0.911          F_divider/c11_0
+    ----------------------------------------
+    Total                      1.949ns (1.502ns logic, 0.447ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'F_divider/c9_0'
+  Clock period: 1.949ns (frequency: 513.084MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.949ns (Levels of Logic = 0)
+  Source:            F_divider/c10_0 (FF)
+  Destination:       F_divider/c10_0 (FF)
+  Source Clock:      F_divider/c9_0 rising
+  Destination Clock: F_divider/c9_0 rising
+
+  Data Path: F_divider/c10_0 to F_divider/c10_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.447  F_divider/c10_0 (F_divider/c10_0)
+     FDR:R                     0.911          F_divider/c10_0
+    ----------------------------------------
+    Total                      1.949ns (1.502ns logic, 0.447ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'F_divider/c8_0'
+  Clock period: 1.949ns (frequency: 513.084MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.949ns (Levels of Logic = 0)
+  Source:            F_divider/c9_0 (FF)
+  Destination:       F_divider/c9_0 (FF)
+  Source Clock:      F_divider/c8_0 rising
+  Destination Clock: F_divider/c8_0 rising
+
+  Data Path: F_divider/c9_0 to F_divider/c9_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.447  F_divider/c9_0 (F_divider/c9_0)
+     FDR:R                     0.911          F_divider/c9_0
+    ----------------------------------------
+    Total                      1.949ns (1.502ns logic, 0.447ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'F_divider/c7_0'
+  Clock period: 1.949ns (frequency: 513.084MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.949ns (Levels of Logic = 0)
+  Source:            F_divider/c8_0 (FF)
+  Destination:       F_divider/c8_0 (FF)
+  Source Clock:      F_divider/c7_0 rising
+  Destination Clock: F_divider/c7_0 rising
+
+  Data Path: F_divider/c8_0 to F_divider/c8_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.447  F_divider/c8_0 (F_divider/c8_0)
+     FDR:R                     0.911          F_divider/c8_0
+    ----------------------------------------
+    Total                      1.949ns (1.502ns logic, 0.447ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'F_divider/c6_0'
+  Clock period: 1.949ns (frequency: 513.084MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.949ns (Levels of Logic = 0)
+  Source:            F_divider/c7_0 (FF)
+  Destination:       F_divider/c7_0 (FF)
+  Source Clock:      F_divider/c6_0 rising
+  Destination Clock: F_divider/c6_0 rising
+
+  Data Path: F_divider/c7_0 to F_divider/c7_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.447  F_divider/c7_0 (F_divider/c7_0)
+     FDR:R                     0.911          F_divider/c7_0
+    ----------------------------------------
+    Total                      1.949ns (1.502ns logic, 0.447ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'F_divider/c5_0'
+  Clock period: 1.949ns (frequency: 513.084MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.949ns (Levels of Logic = 0)
+  Source:            F_divider/c6_0 (FF)
+  Destination:       F_divider/c6_0 (FF)
+  Source Clock:      F_divider/c5_0 rising
+  Destination Clock: F_divider/c5_0 rising
+
+  Data Path: F_divider/c6_0 to F_divider/c6_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.447  F_divider/c6_0 (F_divider/c6_0)
+     FDR:R                     0.911          F_divider/c6_0
+    ----------------------------------------
+    Total                      1.949ns (1.502ns logic, 0.447ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'F_divider/c4_0'
+  Clock period: 1.949ns (frequency: 513.084MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.949ns (Levels of Logic = 0)
+  Source:            F_divider/c5_0 (FF)
+  Destination:       F_divider/c5_0 (FF)
+  Source Clock:      F_divider/c4_0 rising
+  Destination Clock: F_divider/c4_0 rising
+
+  Data Path: F_divider/c5_0 to F_divider/c5_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.447  F_divider/c5_0 (F_divider/c5_0)
+     FDR:R                     0.911          F_divider/c5_0
+    ----------------------------------------
+    Total                      1.949ns (1.502ns logic, 0.447ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'F_divider/c3_0'
+  Clock period: 1.949ns (frequency: 513.084MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.949ns (Levels of Logic = 0)
+  Source:            F_divider/c4_0 (FF)
+  Destination:       F_divider/c4_0 (FF)
+  Source Clock:      F_divider/c3_0 rising
+  Destination Clock: F_divider/c3_0 rising
+
+  Data Path: F_divider/c4_0 to F_divider/c4_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.447  F_divider/c4_0 (F_divider/c4_0)
+     FDR:R                     0.911          F_divider/c4_0
+    ----------------------------------------
+    Total                      1.949ns (1.502ns logic, 0.447ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'F_divider/c2_0'
+  Clock period: 1.949ns (frequency: 513.084MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.949ns (Levels of Logic = 0)
+  Source:            F_divider/c3_0 (FF)
+  Destination:       F_divider/c3_0 (FF)
+  Source Clock:      F_divider/c2_0 rising
+  Destination Clock: F_divider/c2_0 rising
+
+  Data Path: F_divider/c3_0 to F_divider/c3_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.447  F_divider/c3_0 (F_divider/c3_0)
+     FDR:R                     0.911          F_divider/c3_0
+    ----------------------------------------
+    Total                      1.949ns (1.502ns logic, 0.447ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'F_divider/c1_0'
+  Clock period: 1.949ns (frequency: 513.084MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.949ns (Levels of Logic = 0)
+  Source:            F_divider/c2_0 (FF)
+  Destination:       F_divider/c2_0 (FF)
+  Source Clock:      F_divider/c1_0 rising
+  Destination Clock: F_divider/c1_0 rising
+
+  Data Path: F_divider/c2_0 to F_divider/c2_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.447  F_divider/c2_0 (F_divider/c2_0)
+     FDR:R                     0.911          F_divider/c2_0
+    ----------------------------------------
+    Total                      1.949ns (1.502ns logic, 0.447ns route)
+                                       (77.1% logic, 22.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 40 / 10
+-------------------------------------------------------------------------
+Offset:              4.285ns (Levels of Logic = 2)
+  Source:            radar_3 (PAD)
+  Destination:       rockets1/temp_4 (FF)
+  Destination Clock: clock rising
+
+  Data Path: radar_3 to rockets1/temp_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            14   1.218   1.175  radar_3_IBUF (radar_3_IBUF)
+     LUT3:I0->O            5   0.704   0.633  rockets1/temp_not00011 (rockets1/temp_not0001)
+     FDE:CE                    0.555          rockets1/temp_0
+    ----------------------------------------
+    Total                      4.285ns (2.477ns logic, 1.808ns route)
+                                       (57.8% logic, 42.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'F_divider/clock_station_0'
+  Total number of paths / destination ports: 195 / 30
+-------------------------------------------------------------------------
+Offset:              6.814ns (Levels of Logic = 4)
+  Source:            radar_3 (PAD)
+  Destination:       station_3/rockets_4 (FF)
+  Destination Clock: F_divider/clock_station_0 rising
+
+  Data Path: radar_3 to station_3/rockets_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            14   1.218   1.079  radar_3_IBUF (radar_3_IBUF)
+     LUT4:I1->O            2   0.704   0.622  station_3/rockets_not000123 (station_3/rockets_not000123)
+     LUT3:I0->O            1   0.704   0.595  station_3/rockets_not00019_SW1 (N32)
+     LUT4:I0->O            5   0.704   0.633  station_3/rockets_not000125 (station_3/rockets_not0001)
+     FDE:CE                    0.555          station_3/rockets_0
+    ----------------------------------------
+    Total                      6.814ns (3.885ns logic, 2.929ns route)
+                                       (57.0% logic, 43.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'F_divider/clock_7s_0'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              4.796ns (Levels of Logic = 1)
+  Source:            display/counter_0 (FF)
+  Destination:       AN0 (PAD)
+  Source Clock:      F_divider/clock_7s_0 rising
+
+  Data Path: display/counter_0 to AN0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             11   0.591   0.933  display/counter_0 (display/counter_0)
+     OBUF:I->O                 3.272          AN0_OBUF (AN0)
+    ----------------------------------------
+    Total                      4.796ns (3.863ns logic, 0.933ns route)
+                                       (80.5% logic, 19.5% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 11.04 secs
+ 
+--> 
+
+Total memory usage is 261468 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   13 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

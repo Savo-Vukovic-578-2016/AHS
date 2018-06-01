@@ -1,0 +1,61 @@
+xst -intstyle ise -ifn "D:/Program Files/School Documents/AHS/CCS.xst" -ofn "D:/Program Files/School Documents/AHS/CCS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s1200e-fg320-4 "CCS.ngc" CCS.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o CCS_map.ncd CCS.ngd CCS.pcf 
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o CCS_map.ncd CCS.ngd CCS.pcf 
+xst -intstyle ise -ifn "D:/Program Files/School Documents/AHS/CCS.xst" -ofn "D:/Program Files/School Documents/AHS/CCS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc implementation_1.ucf -p xc3s1200e-fg320-4 "CCS.ngc" CCS.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o CCS_map.ncd CCS.ngd CCS.pcf 
+xst -intstyle ise -ifn "D:/Program Files/School Documents/AHS/CCS.xst" -ofn "D:/Program Files/School Documents/AHS/CCS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc implementation_1.ucf -p xc3s1200e-fg320-4 "CCS.ngc" CCS.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o CCS_map.ncd CCS.ngd CCS.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CCS_preroute.twx CCS_map.ncd -o CCS_preroute.twr CCS.pcf -ucf implementation_1.ucf 
+xst -intstyle ise -ifn "D:/Program Files/School Documents/AHS/CCS.xst" -ofn "D:/Program Files/School Documents/AHS/CCS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc implementation_1.ucf -p xc3s1200e-fg320-4 "CCS.ngc" CCS.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o CCS_map.ncd CCS.ngd CCS.pcf 
+par -w -intstyle ise -ol high -t 1 CCS_map.ncd CCS.ncd CCS.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CCS.twx CCS.ncd -o CCS.twr CCS.pcf -ucf implementation_1.ucf 
+bitgen -intstyle ise -f CCS.ut CCS.ncd 
+xst -intstyle ise -ifn "D:/Program Files/School Documents/AHS/CCS.xst" -ofn "D:/Program Files/School Documents/AHS/CCS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc implementation_1.ucf -p xc3s1200e-fg320-4 "CCS.ngc" CCS.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o CCS_map.ncd CCS.ngd CCS.pcf 
+par -w -intstyle ise -ol high -t 1 CCS_map.ncd CCS.ncd CCS.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CCS.twx CCS.ncd -o CCS.twr CCS.pcf -ucf implementation_1.ucf 
+bitgen -intstyle ise -f CCS.ut CCS.ncd 
+bitgen -intstyle ise -f CCS.ut CCS.ncd 
+xst -intstyle ise -ifn "D:/Program Files/School Documents/AHS/CCS.xst" -ofn "D:/Program Files/School Documents/AHS/CCS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc implementation_1.ucf -p xc3s1200e-fg320-4 "CCS.ngc" CCS.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o CCS_map.ncd CCS.ngd CCS.pcf 
+par -w -intstyle ise -ol high -t 1 CCS_map.ncd CCS.ncd CCS.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CCS.twx CCS.ncd -o CCS.twr CCS.pcf -ucf implementation_1.ucf 
+bitgen -intstyle ise -f CCS.ut CCS.ncd 
+xst -intstyle ise -ifn "D:/Program Files/School Documents/AHS/CCS.xst" -ofn "D:/Program Files/School Documents/AHS/CCS.syr" 
+xst -intstyle ise -ifn "D:/Program Files/School Documents/AHS/CCS.xst" -ofn "D:/Program Files/School Documents/AHS/CCS.syr" 
+xst -intstyle ise -ifn "D:/Program Files/School Documents/AHS/CCS.xst" -ofn "D:/Program Files/School Documents/AHS/CCS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc implementation_1.ucf -p xc3s1200e-fg320-4 "CCS.ngc" CCS.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o CCS_map.ncd CCS.ngd CCS.pcf 
+xst -intstyle ise -ifn "D:/Program Files/School Documents/AHS/CCS.xst" -ofn "D:/Program Files/School Documents/AHS/CCS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc implementation_1.ucf -p xc3s1200e-fg320-4 "CCS.ngc" CCS.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o CCS_map.ncd CCS.ngd CCS.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc implementation_1.ucf -p xc3s1200e-fg320-4 "CCS.ngc" CCS.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o CCS_map.ncd CCS.ngd CCS.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CCS_preroute.twx CCS_map.ncd -o CCS_preroute.twr CCS.pcf -ucf implementation_1.ucf 
+xst -intstyle ise -ifn "D:/Program Files/School Documents/AHS/CCS.xst" -ofn "D:/Program Files/School Documents/AHS/CCS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc implementation_1.ucf -p xc3s1200e-fg320-4 "CCS.ngc" CCS.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o CCS_map.ncd CCS.ngd CCS.pcf 
+par -w -intstyle ise -ol high -t 1 CCS_map.ncd CCS.ncd CCS.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CCS.twx CCS.ncd -o CCS.twr CCS.pcf -ucf implementation_1.ucf 
+bitgen -intstyle ise -f CCS.ut CCS.ncd 
+xst -intstyle ise -ifn "D:/Program Files/School Documents/AHS/CCS.xst" -ofn "D:/Program Files/School Documents/AHS/CCS.syr" 
+xst -intstyle ise -ifn "D:/Program Files/School Documents/AHS/CCS.xst" -ofn "D:/Program Files/School Documents/AHS/CCS.syr" 
+xst -intstyle ise -ifn "D:/Program Files/School Documents/AHS/CCS.xst" -ofn "D:/Program Files/School Documents/AHS/CCS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc implementation_1.ucf -p xc3s1200e-fg320-4 "CCS.ngc" CCS.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o CCS_map.ncd CCS.ngd CCS.pcf 
+par -w -intstyle ise -ol high -t 1 CCS_map.ncd CCS.ncd CCS.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CCS.twx CCS.ncd -o CCS.twr CCS.pcf -ucf implementation_1.ucf 
+bitgen -intstyle ise -f CCS.ut CCS.ncd 
+xst -intstyle ise -ifn "D:/Program Files/School Documents/AHS/CCS.xst" -ofn "D:/Program Files/School Documents/AHS/CCS.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc implementation_1.ucf -p xc3s1200e-fg320-4 "CCS.ngc" CCS.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o CCS_map.ncd CCS.ngd CCS.pcf 
+par -w -intstyle ise -ol high -t 1 CCS_map.ncd CCS.ncd CCS.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml CCS.twx CCS.ncd -o CCS.twr CCS.pcf -ucf implementation_1.ucf 
+bitgen -intstyle ise -f CCS.ut CCS.ncd 

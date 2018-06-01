@@ -1,0 +1,6 @@
+verilog work "rockets.v"
+verilog work "FD.v"
+verilog work "display_7s.v"
+verilog work "displays.v"
+verilog work "AFCS.v"
+verilog work "CCS.v"

@@ -1,0 +1,381 @@
+Release 14.7 par P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+SAVOVUKOVIC-PC::  Mon Dec 11 15:07:43 2017
+
+par -w -intstyle ise -ol high -t 1 CCS_map.ncd CCS.ncd CCS.pcf 
+
+
+Constraints file: CCS.pcf.
+Loading device for application Rf_Device from file '3s1200e.nph' in environment D:\ISEDesign\14.7\ISE_DS\ISE\.
+   "CCS" is an NCD, version 3.2, device xc3s1200e, package fg320, speed -4
+
+Initializing temperature to 85.000 Celsius. (default - Range: -40.000 to 100.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.320 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. Because there are not defined timing requirements, a timing score will not be
+   reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
+   Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
+
+Device speed data version:  "PRODUCTION 1.27 2013-10-13".
+
+
+Design Summary Report:
+
+ Number of External IOBs                          19 out of 250     7%
+
+   Number of External Input IOBs                  7
+
+      Number of External Input IBUFs              7
+        Number of LOCed External Input IBUFs      7 out of 7     100%
+
+
+   Number of External Output IOBs                12
+
+      Number of External Output IOBs             12
+        Number of LOCed External Output IOBs     12 out of 12    100%
+
+
+   Number of External Bidir IOBs                  0
+
+
+   Number of BUFGMUXs                        1 out of 24      4%
+   Number of Slices                         72 out of 8672    1%
+      Number of SLICEMs                      0 out of 4336    0%
+
+
+
+Overall effort level (-ol):   High 
+Placer effort level (-pl):    High 
+Placer cost table entry (-t): 1
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 2 secs 
+Finished initial Timing Analysis.  REAL time: 2 secs 
+
+
+Starting Placer
+Total REAL time at the beginning of Placer: 2 secs 
+Total CPU  time at the beginning of Placer: 2 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:9ea04f16) REAL time: 3 secs 
+
+Phase 2.7  Design Feasibility Check
+Phase 2.7  Design Feasibility Check (Checksum:9ea04f16) REAL time: 3 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:9ea04f16) REAL time: 3 secs 
+
+Phase 4.2  Initial Clock and IO Placement
+
+Phase 4.2  Initial Clock and IO Placement (Checksum:768ab426) REAL time: 3 secs 
+
+Phase 5.30  Global Clock Region Assignment
+Phase 5.30  Global Clock Region Assignment (Checksum:768ab426) REAL time: 3 secs 
+
+Phase 6.36  Local Placement Optimization
+Phase 6.36  Local Placement Optimization (Checksum:768ab426) REAL time: 3 secs 
+
+Phase 7.8  Global Placement
+......
+Phase 7.8  Global Placement (Checksum:d1c3186e) REAL time: 6 secs 
+
+Phase 8.5  Local Placement Optimization
+Phase 8.5  Local Placement Optimization (Checksum:d1c3186e) REAL time: 6 secs 
+
+Phase 9.18  Placement Optimization
+Phase 9.18  Placement Optimization (Checksum:4a93d146) REAL time: 7 secs 
+
+Phase 10.5  Local Placement Optimization
+Phase 10.5  Local Placement Optimization (Checksum:4a93d146) REAL time: 7 secs 
+
+Total REAL time to Placer completion: 7 secs 
+Total CPU  time to Placer completion: 7 secs 
+Writing design to file CCS.ncd
+
+
+
+Starting Router
+
+
+Phase  1  : 432 unrouted;      REAL time: 21 secs 
+
+Phase  2  : 359 unrouted;      REAL time: 21 secs 
+
+Phase  3  : 61 unrouted;      REAL time: 21 secs 
+
+Phase  4  : 74 unrouted; (Par is working to improve performance)     REAL time: 23 secs 
+
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 23 secs 
+
+Updating file: CCS.ncd with current fully routed design.
+
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 23 secs 
+
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 30 secs 
+
+Updating file: CCS.ncd with current fully routed design.
+
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 31 secs 
+
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 31 secs 
+
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 31 secs 
+
+Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 31 secs 
+
+Phase 12  : 0 unrouted; (Par is working to improve performance)     REAL time: 31 secs 
+WARNING:Route:455 - CLK Net:F_divider/c1<0> may have excessive skew because 
+      1 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:F_divider/c25<0> may have excessive skew because 
+      1 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:F_divider/c19<0> may have excessive skew because 
+      1 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:F_divider/c17<0> may have excessive skew because 
+      1 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:F_divider/c6<0> may have excessive skew because 
+      1 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:F_divider/c13<0> may have excessive skew because 
+      1 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:F_divider/c22<0> may have excessive skew because 
+      1 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:F_divider/c2<0> may have excessive skew because 
+      1 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:F_divider/c23<0> may have excessive skew because 
+      1 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:F_divider/c4<0> may have excessive skew because 
+      1 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:F_divider/c5<0> may have excessive skew because 
+      1 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:F_divider/c18<0> may have excessive skew because 
+      1 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:F_divider/c9<0> may have excessive skew because 
+      1 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:F_divider/c10<0> may have excessive skew because 
+      1 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:F_divider/c11<0> may have excessive skew because 
+      1 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:F_divider/c12<0> may have excessive skew because 
+      1 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:F_divider/c20<0> may have excessive skew because 
+      1 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:F_divider/c21<0> may have excessive skew because 
+      1 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:F_divider/c3<0> may have excessive skew because 
+      1 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:F_divider/c7<0> may have excessive skew because 
+      1 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:F_divider/c8<0> may have excessive skew because 
+      1 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:F_divider/clock_7s<0> may have excessive skew because 
+      0 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:F_divider/clock_station<0> may have excessive skew because 
+      0 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:F_divider/c15<0> may have excessive skew because 
+      1 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+WARNING:Route:455 - CLK Net:F_divider/c14<0> may have excessive skew because 
+      1 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
+
+Total REAL time to Router completion: 31 secs 
+Total CPU time to Router completion: 31 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|         clock_BUFGP | BUFGMUX_X2Y11| No   |   23 |  0.126     |  0.377      |
++---------------------+--------------+------+------+------------+-------------+
+|F_divider/clock_7s<0 |              |      |      |            |             |
+|                   > |         Local|      |    8 |  0.228     |  2.106      |
++---------------------+--------------+------+------+------------+-------------+
+|F_divider/clock_stat |              |      |      |            |             |
+|              ion<0> |         Local|      |   11 |  0.097     |  1.916      |
++---------------------+--------------+------+------+------------+-------------+
+|     F_divider/c9<0> |         Local|      |    2 |  0.000     |  1.218      |
++---------------------+--------------+------+------+------------+-------------+
+|    F_divider/c10<0> |         Local|      |    2 |  0.000     |  1.548      |
++---------------------+--------------+------+------+------------+-------------+
+|    F_divider/c11<0> |         Local|      |    2 |  0.000     |  1.126      |
++---------------------+--------------+------+------+------------+-------------+
+|    F_divider/c15<0> |         Local|      |    2 |  0.000     |  0.947      |
++---------------------+--------------+------+------+------------+-------------+
+|    F_divider/c12<0> |         Local|      |    2 |  0.000     |  1.170      |
++---------------------+--------------+------+------+------------+-------------+
+|    F_divider/c19<0> |         Local|      |    2 |  0.000     |  1.692      |
++---------------------+--------------+------+------+------------+-------------+
+|    F_divider/c20<0> |         Local|      |    2 |  0.000     |  1.217      |
++---------------------+--------------+------+------+------------+-------------+
+|    F_divider/c13<0> |         Local|      |    2 |  0.000     |  1.193      |
++---------------------+--------------+------+------+------------+-------------+
+|    F_divider/c21<0> |         Local|      |    2 |  0.000     |  1.805      |
++---------------------+--------------+------+------+------------+-------------+
+|     F_divider/c1<0> |         Local|      |    2 |  0.000     |  1.208      |
++---------------------+--------------+------+------+------------+-------------+
+|    F_divider/c14<0> |         Local|      |    2 |  0.000     |  0.964      |
++---------------------+--------------+------+------+------------+-------------+
+|    F_divider/c22<0> |         Local|      |    2 |  0.000     |  1.200      |
++---------------------+--------------+------+------+------------+-------------+
+|     F_divider/c2<0> |         Local|      |    2 |  0.000     |  0.680      |
++---------------------+--------------+------+------+------------+-------------+
+|    F_divider/c23<0> |         Local|      |    2 |  0.000     |  1.560      |
++---------------------+--------------+------+------+------------+-------------+
+|     F_divider/c3<0> |         Local|      |    2 |  0.000     |  1.805      |
++---------------------+--------------+------+------+------------+-------------+
+|     F_divider/c4<0> |         Local|      |    2 |  0.000     |  1.202      |
++---------------------+--------------+------+------+------------+-------------+
+|    F_divider/c17<0> |         Local|      |    2 |  0.000     |  0.950      |
++---------------------+--------------+------+------+------------+-------------+
+|    F_divider/c25<0> |         Local|      |    2 |  0.000     |  2.499      |
++---------------------+--------------+------+------+------------+-------------+
+|     F_divider/c5<0> |         Local|      |    2 |  0.000     |  0.680      |
++---------------------+--------------+------+------+------------+-------------+
+|    F_divider/c18<0> |         Local|      |    2 |  0.000     |  1.532      |
++---------------------+--------------+------+------+------------+-------------+
+|     F_divider/c6<0> |         Local|      |    2 |  0.000     |  1.218      |
++---------------------+--------------+------+------+------------+-------------+
+|     F_divider/c7<0> |         Local|      |    2 |  0.000     |  1.218      |
++---------------------+--------------+------+------+------------+-------------+
+|     F_divider/c8<0> |         Local|      |    2 |  0.000     |  1.218      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 0 (Setup: 0, Hold: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net F_d | SETUP       |         N/A|     2.711ns|     N/A|           0
+  ivider/clock_7s<0>                        | HOLD        |     1.293ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net F_d | SETUP       |         N/A|     4.711ns|     N/A|           0
+  ivider/clock_station<0>                   | HOLD        |     1.377ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clo | SETUP       |         N/A|     3.788ns|     N/A|           0
+  ck_BUFGP                                  | HOLD        |     1.322ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net F_d | SETUP       |         N/A|     2.225ns|     N/A|           0
+  ivider/c9<0>                              | HOLD        |     1.543ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net F_d | SETUP       |         N/A|     2.159ns|     N/A|           0
+  ivider/c10<0>                             | HOLD        |     1.491ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net F_d | SETUP       |         N/A|     2.215ns|     N/A|           0
+  ivider/c11<0>                             | HOLD        |     1.535ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net F_d | SETUP       |         N/A|     2.556ns|     N/A|           0
+  ivider/c15<0>                             | HOLD        |     1.808ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net F_d | SETUP       |         N/A|     2.195ns|     N/A|           0
+  ivider/c12<0>                             | HOLD        |     1.519ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net F_d | SETUP       |         N/A|     2.276ns|     N/A|           0
+  ivider/c19<0>                             | HOLD        |     1.584ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net F_d | SETUP       |         N/A|     2.226ns|     N/A|           0
+  ivider/c20<0>                             | HOLD        |     1.544ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net F_d | SETUP       |         N/A|     2.211ns|     N/A|           0
+  ivider/c13<0>                             | HOLD        |     1.532ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net F_d | SETUP       |         N/A|     2.211ns|     N/A|           0
+  ivider/c21<0>                             | HOLD        |     1.532ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net F_d | SETUP       |         N/A|     2.211ns|     N/A|           0
+  ivider/c1<0>                              | HOLD        |     1.532ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net F_d | SETUP       |         N/A|     2.211ns|     N/A|           0
+  ivider/c14<0>                             | HOLD        |     1.532ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net F_d | SETUP       |         N/A|     2.211ns|     N/A|           0
+  ivider/c22<0>                             | HOLD        |     1.532ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net F_d | SETUP       |         N/A|     2.226ns|     N/A|           0
+  ivider/c2<0>                              | HOLD        |     1.544ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net F_d | SETUP       |         N/A|     2.161ns|     N/A|           0
+  ivider/c23<0>                             | HOLD        |     1.492ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net F_d | SETUP       |         N/A|     2.211ns|     N/A|           0
+  ivider/c3<0>                              | HOLD        |     1.532ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net F_d | SETUP       |         N/A|     2.211ns|     N/A|           0
+  ivider/c4<0>                              | HOLD        |     1.532ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net F_d | SETUP       |         N/A|     2.226ns|     N/A|           0
+  ivider/c17<0>                             | HOLD        |     1.544ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net F_d | SETUP       |         N/A|     2.220ns|     N/A|           0
+  ivider/c25<0>                             | HOLD        |     1.540ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net F_d | SETUP       |         N/A|     2.211ns|     N/A|           0
+  ivider/c5<0>                              | HOLD        |     1.532ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net F_d | SETUP       |         N/A|     2.170ns|     N/A|           0
+  ivider/c18<0>                             | HOLD        |     1.499ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net F_d | SETUP       |         N/A|     2.276ns|     N/A|           0
+  ivider/c6<0>                              | HOLD        |     1.584ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net F_d | SETUP       |         N/A|     2.276ns|     N/A|           0
+  ivider/c7<0>                              | HOLD        |     1.584ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net F_d | SETUP       |         N/A|     2.276ns|     N/A|           0
+  ivider/c8<0>                              | HOLD        |     1.584ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 32 secs 
+Total CPU time to PAR completion: 32 secs 
+
+Peak Memory Usage:  322 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 25
+Number of info messages: 1
+
+Writing design to file CCS.ncd
+
+
+
+PAR done!
